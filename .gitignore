@@ -1,0 +1,21 @@
+# Virtual Environment
+venv/
+env/
+.env
+
+# PyInstaller
+build/
+dist/
+*.spec
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Custom temporary files
+dom_output.txt
+
+# macOS
+.DS_Store
