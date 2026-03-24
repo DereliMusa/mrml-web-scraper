@@ -4,9 +4,9 @@
 echo "Setting up environment..."
 cd "$(dirname "$0")"
 
-# Clean previous builds and virtual environments
+# Clean previous builds (keep venv so downloads don't repeat unnecessarily)
 echo "Cleaning old files..."
-rm -rf venv build dist "Unisis Bot.spec"
+rm -rf build dist "Unisis Bot.spec"
 
 if [ ! -d "venv" ]; then
     /opt/homebrew/bin/python3 -m venv venv
@@ -26,14 +26,14 @@ cp -r "dist/Unisis Bot.app" dist/dmg_staging/
 test -f "dist/Unisis_Bot.dmg" && rm "dist/Unisis_Bot.dmg"
 
 create-dmg \
-  --volname "Unisis Bot Setup" \
+  --volname "Unisis Bot Kurulum" \
   --volicon "app_icon.icns" \
   --background "dmg_background.png" \
   --window-pos 200 120 \
-  --window-size 400 244 \
+  --window-size 420 280 \
   --icon-size 80 \
-  --icon "Unisis Bot.app" 100 120 \
-  --app-drop-link 300 120 \
+  --icon "Unisis Bot.app" 100 140 \
+  --app-drop-link 320 140 \
   "dist/Unisis_Bot.dmg" \
   "dist/dmg_staging/"
 
