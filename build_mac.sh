@@ -30,10 +30,10 @@ create-dmg \
   --volicon "app_icon.icns" \
   --background "dmg_background.png" \
   --window-pos 200 120 \
-  --window-size 420 280 \
-  --icon-size 80 \
-  --icon "Unisis Bot.app" 100 140 \
-  --app-drop-link 320 140 \
+  --window-size 800 538 \
+  --icon-size 100 \
+  --icon "Unisis Bot.app" 172 270 \
+  --app-drop-link 628 270 \
   "dist/Unisis_Bot.dmg" \
   "dist/dmg_staging/"
 
